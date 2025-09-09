@@ -125,7 +125,7 @@ class LecroyScope:
 
     @property
     def trigger_type(self) -> TriggerType:
-        return TriggerType(self._read('app.Acquisition.Trigger.Type'))
+        return TriggerType(self._read('app.Acquisition.Trigger.Type').upper())
 
     @trigger_type.setter
     def trigger_type(self, new_type: TriggerType):
